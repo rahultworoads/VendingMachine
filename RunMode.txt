@@ -1,0 +1,35 @@
+//Run mode starts
+void Vending::Run()
+{
+	int choice;
+	while(1)
+	{
+		cout << what would you like? << endl;
+		cout << "1 = Consumer mode" << endl;
+		cout << "2 = Maintenance mode" << endl;
+		cout << "3 = Quit" << endl;
+	
+		switch(choice)
+		{
+			case 1:
+					consumerMode()
+					break;
+			case 2:
+					maintenenceMode()
+					break;
+			case 3:
+					break;
+			default:
+						cout << "Error, Please chek you input" << endl;
+						break;
+		}
+		
+		if (choice==3)
+		{
+		cout << "Exiting Run mode" << endl;
+			break;
+		}
+	}
+	
+}
+//Run mode ends

@@ -1,0 +1,44 @@
+//restock mode starts
+void Vending::restock()
+{
+	int choice1; //choice1 is drink at menu[choice1]
+	int choice2; //coice 2 is amount to add to restock
+	int max = 20;
+	cout << "----Retock Mode----" << endl;
+	
+	
+	
+	while(1)
+	{	
+		cout << "What would you like to restock" << endl;
+		cin >> choice1
+		
+		if(choice1 <= menu.size() && choice1 > 0)
+		{
+			choice1 -= 1;
+			
+			cout << choice1 << ": " << menu[choice1].getName() << "(" << menu[choice1].getCount() << ")" << endl << endl << endl;
+			
+			while(1)
+			{
+				cout << "How much do you want to add" << endl;
+				cin >> choice2;
+				
+				if(menu[choice1].setCount(menu[choice1].getcount()) + choice2 > max || menu[choice1].setCount(menu[choice1].getcount()) + choice2 < 0)
+				{
+					cout << "Error: Too much drinks in machine, enter smaller amount";
+				}
+				else
+					{
+						menu[choice1].setCount(menu[choice1].getcount() + choice2)
+					}
+			}					
+					
+		}
+		
+		
+	}
+	
+}
+
+// restock funtion ends

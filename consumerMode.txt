@@ -1,0 +1,45 @@
+//consumer mode starts
+void Vending::consumerMode()
+{
+	int choice;
+	
+	while(1)
+	{
+		printBal();
+		cout << "What would u like to do? " << endl;
+		cout << "1 = Add credit" << endl;
+		cout << "2 = Show Drink data" << endl;
+		cout << "3 = Purcahse" << endl;
+		cout << "4 = Quit" << endl;
+		
+		cin >> choice;
+		switch(choice)
+		{
+			case 1:
+						credit();
+						break;
+			case 2:
+						printDrink;
+						break;
+			case 3:
+						purchase();
+						break;
+			case 4:
+						break;
+			default:
+						cout << "Error, Please check you input" << endl;
+						break;
+		}
+		
+		if (choice == 4)
+		{
+		cout << "Exiting consumer mode" << endl;
+			break;
+		}
+
+	}	
+	
+	cout << "Thanks for the purchase" << endl;
+	
+}
+//consumer mode ends

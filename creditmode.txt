@@ -1,0 +1,45 @@
+//credit mode starts
+void Vending::credit()
+{
+	int choice;
+
+	while(1)
+	{
+		printBal();
+		cout << "What would u like to add? " << endl;
+		cout << "1 = Quarter" << endl;
+		cout << "2 = Dollar" << endl;
+		cout << "3 = 5 Dollars" << endl;
+		cout << "4 = Quit" << endl;
+	
+	cin >> choice;
+		switch(choice)
+		{
+			case 1: 
+						balance += 0.25;
+						break;
+			
+			case 2: 
+						balance +=1.00;
+						break;
+			
+			case 3: 
+						balance +=5.00;
+						break;
+			
+			case 4: 
+						break;
+						
+			default:
+						cout << "Error, Please chek you input" << endl;
+						break;
+		}
+		
+		if (choice == 4)
+		{
+		cout << "Exiting credit mode" << endl;
+			break;
+		}
+}
+
+//credit mode ends

@@ -1,0 +1,15 @@
+
+void Vending::printDrink(int n);
+{
+	cout << "Drink:" << menu[n].getName() << endl;	
+	cout << "Price: $" << menu[n].getPrice() << endl;
+	cout << "Calories:" << menu[n].getCal() << endl;
+}
+void Vending::printBal();
+{
+	cout << balance << endl;
+}
+void Vending::printProfit();
+{
+	cout << profit << endl;
+}
