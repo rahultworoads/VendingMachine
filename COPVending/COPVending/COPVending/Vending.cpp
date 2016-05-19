@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Vending.h"
 #include <iostream>
 #include <time.h>
@@ -12,7 +12,7 @@ using namespace std;
 
 Vending::Vending()
 {
-	
+
 	balance = 0.00;
 	profit = 0.00;
 	//cout << "Machine has been created." << endl;
@@ -79,7 +79,7 @@ void Vending::maintnanceMode()
 		cout << endl;
 		switch (choice)
 		{
-		case 1: 
+		case 1:
 			newDrink();
 			break;
 		case 2:
@@ -88,7 +88,7 @@ void Vending::maintnanceMode()
 		case 3:
 			editDrink();
 			break;
-		case 4: 
+		case 4:
 			printStatus();
 			break;
 		case 0:
@@ -198,7 +198,7 @@ void Vending::credit()
 			break;
 
 		default:
-			cout << "Error, Please chek you input" << endl<<endl;
+			cout << "Error, Please check you input" << endl<<endl;
 			break;
 		}
 
@@ -230,7 +230,7 @@ void Vending::editDrink()
 		cin >> choice1;
 		cout << endl;
 
-		if (choice1 <= menu.size() && choice1 > 0)  
+		if (choice1 <= menu.size() && choice1 > 0)
 		{
 			choice1 -= 1;
 			while (1)
@@ -271,7 +271,7 @@ void Vending::editDrink()
 				}
 				if (choice2 == 0)
 				{
-					
+
 					break;
 				}
 			}
@@ -282,7 +282,7 @@ void Vending::editDrink()
 			break;
 		}
 	}
-	
+
 }
 void Vending::newDrink()
 {
@@ -290,9 +290,9 @@ void Vending::newDrink()
 	double drinkPrice;
 	int drinkCal;
 	Drink tempDrink("null", 0,0);
-	int choice; 
+	int choice;
 	cout << "NEW DRINK MODE" << endl << endl;
-	
+
 
 	while (1)
 	{
@@ -332,7 +332,7 @@ void Vending::purchase()
 		cout << "User Input: ";
 		cin >> choice;
 		cout << endl;
-		
+
 		if (choice < menu.size() && choice > 0)
 		{
 			choice -= 1;
@@ -413,7 +413,7 @@ int Vending::getInput(int num)
 
 void Vending::debt(double d)
 {
-	
+
 		balance -= d;
 
 }
@@ -429,7 +429,7 @@ void Vending::printMenu()
 			if (j > menu[i].getName().length())
 				cout << "-";
 		}
-		
+
 		if (menu[i].getCount() != 0)
 		{
 			cout << " $" << setprecision(2) << fixed << menu[i].getPrice() << endl;
@@ -441,7 +441,7 @@ void Vending::printMenu()
 void Vending::change()
 {
 	cout << "Dispensing " << balance / .25 << " quarters" << endl;
-	balance = 0; 
+	balance = 0;
 }
 
 //restock mode starts
@@ -491,8 +491,8 @@ void Vending::restock()
 				}
 
 			}
-		
-			
+
+
 			}
 		else
 		{

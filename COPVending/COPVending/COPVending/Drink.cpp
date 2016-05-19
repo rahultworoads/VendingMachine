@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Drink.h"
 #include <string>
 
@@ -14,7 +14,7 @@ Drink::Drink(string n, double p, int c)
 string Drink::getName()
 {
 	return name;
-} 
+}
 
 double Drink::getPrice()
 {
